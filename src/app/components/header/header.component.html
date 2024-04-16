@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <h5 (click)="clickHome()">Home</h5>
+        <span class="input-group-text border-0" id="search-addon" style="margin-left:-800px ;">
+            <i class="fas fa-search"></i>
+            <input class="input-group-text border-0" placeholder="Search" type="text">
+          </span>
+      <ul class="navbar-nav d-flex flex-row ">
+     
+        <!-- Icon dropdown -->
+         <li> <i class="fas fa-bell mr-4" style="margin-right: 10px;" aria-hidden="true"></i>
+         </li> 
+         <li><i class="fa fa-paper-plane" aria-hidden="true" (click)="onmsg()"></i>
+
+         </li>
+         <li>
+          <div class="dropdown text-end mr-6 ml-4" style="margin-left: 10px; margin-right: 10px;">
+
+            <a class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <img  alt="picture" class="rounded-circle">
+            </a>
+            <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+              <li>
+                <a class="dropdown-item" (click)="clickProfile()">
+                  <i class="fa fa-user"></i>
+                  Profile
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" >
+                  <i class="fa fa-sign-out"></i>
+                  Sign out
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </nav>

@@ -44,15 +44,6 @@ constructor(private router:Router,private loginService:LoginService,private form
 
       return;
     }
- 
-    this.loginService.signIn(this.loginform.value.email, this.loginform.value.pwd).then
-    (respond => {
-      console.log('testttttttttttttttt');
-      console.log( respond); 
-          this.router.navigate(['/acceuil']);})
-        .catch(error => {
-            console.error(error); 
-          });
- 
   }
+    
 }

@@ -18,8 +18,8 @@ export class SignupComponent implements OnInit{
   signupform!:FormGroup;
   name:any;
    email:any;
-   pwd:any;
-   repwd:any;
+   pwd!:String;
+   repwd!:String;
    submitted=false;
    isSignIn: boolean = true;
 
@@ -41,6 +41,7 @@ export class SignupComponent implements OnInit{
     )}
 
     ngOnInit(): void {
+      this.onSignSubmit();
       setTimeout(() => {
         this.isSignIn = false; // Initially set to sign-in
       }, 200);
@@ -61,15 +62,15 @@ export class SignupComponent implements OnInit{
 
       return;
     }
+    console.log('testttttttttttttttt');
+
  
-    this.signupService.Register(this.signupform.value.email, this.signupform.value.pwd).then
+    this.signupService.SignIn(this.signupform.value.email, this.signupform.value.pwd).subscribe
     (respond => {
       console.log('testttttttttttttttt');
       console.log( respond); 
           this.router.navigate(['/login']);})
-        .catch(error => {
-            console.error(error); 
-          });
+     
  
   }
   
